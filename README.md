@@ -803,11 +803,11 @@ b=20
 
 # AND (&& or -a)
 if [ $a -lt 20 -a $b -gt 15 ]; then echo "Both true"; fi
-if [[ $a -lt 20 && $b -gt 15 ]]; then echo "Both true"; fi
+if [ $a -lt 20 ] && [ $b -gt 15 ]; then echo "Both true"; fi
 
 # OR (|| or -o)
 if [ $a -lt 5 -o $b -gt 15 ]; then echo "At least one true"; fi
-if [[ $a -lt 5 || $b -gt 15 ]]; then echo "At least one true"; fi
+if [ $a -lt 5 || $b -gt 15 ]; then echo "At least one true"; fi
 
 # NOT (!)
 if [ ! $a -eq 5 ]; then echo "Not equal to 5"; fi
